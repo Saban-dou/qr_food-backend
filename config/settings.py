@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-_9976%sq*i#$4pw4_p9q!^q4m8#v9pkq^9m8glad^po&_kg_9q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'qrfood-backend-production.up.railway.app']
-
+import os
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 
 # Application definition
 
